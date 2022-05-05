@@ -1,5 +1,5 @@
 -- 1. Last name "Astaire" is present only one time with actor "Angelina Astaire", hence we would want this in our output list.
-select  *,count(last_name) as count  from sakila.actor
+select  last_name,count(last_name) as count  from sakila.actor
 group by last_name 
 having  count =1 
 order by last_name;
